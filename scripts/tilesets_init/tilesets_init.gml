@@ -124,5 +124,9 @@ function tilesets_init()
 	{
 	    return variable_struct_get(global.biome_tilesets, biome_name);
 	}
+	
+	function get_tileset_amount(biome_name) {
+	
+	}
 }
 
