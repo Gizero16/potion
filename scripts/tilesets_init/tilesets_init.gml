@@ -125,3 +125,4 @@ function tilesets_init()
 	    return variable_struct_get(global.biome_tilesets, biome_name);
 	}
 }
+
