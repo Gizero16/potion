@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"assign_biome",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"assign_biome",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

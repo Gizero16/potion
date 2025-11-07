@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"tilesets_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tilesets_init",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
