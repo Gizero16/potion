@@ -16,6 +16,22 @@ vSpeed = lengthdir_y(inputMagnitude * walkSpeed, inputDirection);
 x += hSpeed;
 y += vSpeed;
 
+// Update sprite index
+var _oldSprite = sprite_index;
+if (inputMagnitude != 0) 
+{
+	direction = inputDirection;
+	sprite_index = spriteRun;
+}
+else
+	sprite_index = spriteIdle;
+
+if (_oldSprite != sprite_index)
+	localFrame = 0;
+
+//Update Image Index
+PlayerAnimateSprite();
+
 // Keep the player inside the room
 x = clamp(x, 0, room_width  - sprite_width  / 2);
 y = clamp(y, 0, room_height - sprite_height / 2);
