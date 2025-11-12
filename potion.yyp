@@ -42,6 +42,7 @@
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"objInventory","path":"objects/objInventory/objInventory.yy",},},
     {"id":{"name":"objMapController","path":"objects/objMapController/objMapController.yy",},},
+    {"id":{"name":"objMouse","path":"objects/objMouse/objMouse.yy",},},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
     {"id":{"name":"objTree","path":"objects/objTree/objTree.yy",},},
     {"id":{"name":"objWall","path":"objects/objWall/objWall.yy",},},
