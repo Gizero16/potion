@@ -1,6 +1,6 @@
 // state machine!!
 
-
+tooltip_id = noone;
 inventoryHover = -1;
 slotHover = -1;
 inventoryDrag = -1;
@@ -17,7 +17,7 @@ mouseOver = function()
 	
 	with (objInventory)
 	{
-		// match the draw_sprite_stretched bounds
+		
 		if (point_in_rectangle(
 			mx,
 			my,
@@ -29,19 +29,52 @@ mouseOver = function()
 		{
 			for (var i = 0; i < INVENTORY_SLOTS; i += 1)
 			{
-				// match the same positioning used in draw
+				
 				var xx = (x + 450) + (i mod rowLength) * (88 + 50) + 10;
 				var yy = (y - 300) + (i div rowLength) * (88 + 50);
 
-				// use same slot size as your sprites (64x64)
+				// creating hitboxes for each slot
+				
+				
+				
 				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
 				{
+					show_debug_message("Hovering over slot :" + string(id))
+					tooltip_id = i;
 					other.slotHover = i;
 					other.inventoryHover = id;
 				}
 			}
 		}
 	}
+	
+with (objCrafting)
+{
+	if (point_in_rectangle(
+		mx,
+		my,
+		x - 650,
+		y + 200,
+		x - 650 + (250 + rowLength * 64),
+		y + 200 + (125 + (((CRAFTING_SLOTS - 1) div rowLength) + 1) * 64)
+	))
+	{
+		for (var i = 0; i < CRAFTING_SLOTS; i += 1)
+		{
+			var xx = (x - 595) + (i mod rowLength) * (88 + 75) + 10;
+			var yy = (y + 250) + (i div rowLength) * (88 + 75);
+
+			if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+			{
+				tooltip_id = id;
+				other.slotHover = i;
+				other.inventoryHover = id;
+			}
+		}
+	}
+}
+
+		
 }
 
 
