@@ -1,5 +1,6 @@
 // state machine!!
 
+
 inventoryHover = -1;
 slotHover = -1;
 inventoryDrag = -1;
@@ -8,36 +9,39 @@ itemDrag = -1;
 
 mouseOver = function()
 {
-	// reset vars
 	slotHover = -1;
 	inventoryHover = -1;
 
-	var mx = mouse_x
-	var my = mouse_y
+	var mx = mouse_x;
+	var my = mouse_y;
 	
 	with (objInventory)
 	{
-		if (point_in_rectangle( // check if mouse is over inventory
-		mx,
-		my,
-		x-6,
-		y-6,
-		x-6 + 12 + rowLength*36,
-		y-6 + 12+(((INVENTORY_SLOTS-1) div rowLength) + 1) * 36
+		// match the draw_sprite_stretched bounds
+		if (point_in_rectangle(
+			mx,
+			my,
+			x + 390,
+			y - 400,
+			x + 390 + (300 + rowLength * 64),
+			y - 400 + (500 + (((INVENTORY_SLOTS - 1) div rowLength) + 1) * 64)
 		))
-	{
-		for(var i = 0; i < INVENTORY_SLOTS; i+=1)
 		{
-			var xx = x + (i mod rowLength) * 36 + 2;
-			var yy = y + (i div rowLength) * 36 + 2;
-			if (point_in_rectangle(mx, my, xx, yy, xx+32, yy+32))
+			for (var i = 0; i < INVENTORY_SLOTS; i += 1)
 			{
-				other.slotHover = i;
-				other.inventoryHover = id;
+				// match the same positioning used in draw
+				var xx = (x + 450) + (i mod rowLength) * (88 + 50) + 10;
+				var yy = (y - 300) + (i div rowLength) * (88 + 50);
+
+				// use same slot size as your sprites (64x64)
+				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+				{
+					other.slotHover = i;
+					other.inventoryHover = id;
+				}
 			}
 		}
 	}
-}
 }
 
 
