@@ -20,7 +20,7 @@ for (var i = 0; i < INVENTORY_SLOTS; i+=1)
 		var alpha = 1.0
 		if ( objMouse.inventoryDrag == id) && (objMouse.slotDrag == i) alpha = 0.5;
 		draw_set_alpha(alpha);
-		draw_sprite(sprPotions, inventory[i], xx, yy);
+		draw_sprite(sprItems, inventory[i], xx, yy);
 		draw_set_alpha(1.0)
 	}
 }

@@ -1,6 +1,6 @@
 // state machine!!
 
-tooltip_id = noone;
+
 inventoryHover = -1;
 slotHover = -1;
 inventoryDrag = -1;
@@ -39,8 +39,9 @@ mouseOver = function()
 				
 				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
 				{
-					show_debug_message("Hovering over slot :" + string(id))
-					tooltip_id = i;
+					show_debug_message("Item in slot =" + string(inventory[i]) )
+					global.tooltip_id = inventory[i];
+					show_debug_message("New Tooltip:" + string(global.tooltip_id))
 					other.slotHover = i;
 					other.inventoryHover = id;
 				}
@@ -66,7 +67,7 @@ with (objCrafting)
 
 			if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
 			{
-				tooltip_id = id;
+				global.tooltip_id = inventory[i];
 				other.slotHover = i;
 				other.inventoryHover = id;
 			}
