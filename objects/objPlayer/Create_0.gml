@@ -19,3 +19,6 @@ throwCooldown = false;
 createOnce = true;
 
 hp = 3; 
+walkSpeed = 30;
+
+//hi
