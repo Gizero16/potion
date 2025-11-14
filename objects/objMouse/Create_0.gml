@@ -39,11 +39,11 @@ mouseOver = function()
 				
 				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
 				{
-					show_debug_message("Item in slot =" + string(inventory[i]) )
-					global.tooltip_id = inventory[i];
+					//show_debug_message("Item in slot =" + string(global.inventory[i][0]) )
+					global.tooltip_id = global.inventory[i][0];
 					show_debug_message("New Tooltip:" + string(global.tooltip_id))
 					other.slotHover = i;
-					other.inventoryHover = id;
+					other.inventoryHover = global.inventory;
 				}
 			}
 		}
@@ -67,9 +67,9 @@ with (objCrafting)
 
 			if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
 			{
-				global.tooltip_id = inventory[i];
+				global.tooltip_id = global.craftInventory[i][0];
 				other.slotHover = i;
-				other.inventoryHover = id;
+				other.inventoryHover = global.craftInventory;
 			}
 		}
 	}
@@ -84,9 +84,9 @@ stateFree = function()
 	mouseOver();
 	
 	// Drag item if slot not empty
-	if( mouse_check_button(mb_left) && (slotHover != -1) && inventoryHover.inventory[slotHover] != -1){
+	if( mouse_check_button(mb_left) && (slotHover != -1) && global.inventory[slotHover][0] != -1){
 		state = stateDrag;
-		itemDrag = inventoryHover.inventory[slotHover];
+		itemDrag = global.inventory[slotHover][0];
 		inventoryDrag = inventoryHover
 		slotDrag = slotHover;
 	}

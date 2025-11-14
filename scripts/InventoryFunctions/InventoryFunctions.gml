@@ -30,9 +30,9 @@ function InventoryAdd(rootObject, itemType) {
 	else return false;
 }
 
-function InventorySwap(objectFrom, slotFrom, objectTo, slotTo)
+function InventorySwap(invFrom, slotFrom, invTo, slotTo)
 {
-	var _itemFrom = objectFrom.inventory[slotFrom]
-	objectFrom.inventory[slotFrom] = objectTo.inventory[slotTo];
-	objectTo.inventory[slotTo] = _itemFrom;
+    var temp = invFrom[slotFrom];
+    invFrom[slotFrom] = invTo[slotTo];
+    invTo[slotTo] = temp;
 }

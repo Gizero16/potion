@@ -1,6 +1,7 @@
 #macro CRAFTING_SLOTS 2
 rowLength = 2;
-inventory = array_create(CRAFTING_SLOTS, -1);
+global.craftInventory = array_create(CRAFTING_SLOTS, -1);
 randomize();
-inventory[0] = 2;
-inventory[1] = 3;
+for (i = 0; i < INVENTORY_SLOTS; i++) {
+	global.craftInventory[i] = [-1, 0] // itemID, itemCount
+}

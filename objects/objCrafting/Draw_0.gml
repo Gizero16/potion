@@ -15,12 +15,14 @@ for (var i = 0; i < CRAFTING_SLOTS; i+=1)
 	var yy = y + 250 + (i div rowLength) * (88+spacing)
 	var hover = (objMouse.inventoryHover == id) && (objMouse.slotHover == i)
 	draw_sprite(sprSlot, hover, xx,yy)
-	if (inventory[i] != -1)
+	if (global.craftInventory[i][0] != -1)
 	{
 		var alpha = 1.0
 		if ( objMouse.inventoryDrag == id) && (objMouse.slotDrag == i) alpha = 0.5;
 		draw_set_alpha(alpha);
-		draw_sprite(sprItems, inventory[i], xx, yy);
+		draw_sprite(sprItems, global.craftInventory[i][0], xx, yy);
 		draw_set_alpha(1.0)
+		draw_set_colour(c_white)
+		draw_text(xx + 75, yy + 70, string(global.craftInventory[i][1]))
 	}
 }
