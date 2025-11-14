@@ -17,3 +17,5 @@ distanceThrow = 20;
 spriteThrow = spr_player_throw;
 throwCooldown = false;
 createOnce = true;
+
+hp = 3; 

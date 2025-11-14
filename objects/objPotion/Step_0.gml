@@ -20,6 +20,10 @@ if (!isThrown) {
         x += lengthdir_x(move_speed, dir);
         y += lengthdir_y(move_speed, dir);
 		image_angle += 5;
+		if (tilemap_get_at_pixel(objPlayer.collisionMap, x , y)) {
+			instance_destroy();
+			objPlayer.createOnce = true;
+		}
 		
     } else {
         x = mx;
@@ -30,7 +34,3 @@ if (!isThrown) {
     }
 }
 
-if(tilemap_get_at_pixel(objPlayer.collisionMap, x , y)) {
-	instance_destroy();
-	objPlayer.createOnce = true;
-}
