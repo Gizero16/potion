@@ -36,7 +36,7 @@ function generate_chunk()
                 break;
 
             default:
-                generate_filler_biome(chunk);
+                generate_border(chunk);
                 break;
         }
 

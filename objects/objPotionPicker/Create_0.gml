@@ -1,0 +1,10 @@
+/* Regeneration Potion
+Haste Potion
+Summon Potion
+Invisibility Potion
+Trap Potion
+Explosion Potion
+Poison Potion
+Sleep Potion
+Bait Potion
+Essense Potion */

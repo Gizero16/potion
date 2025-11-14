@@ -84,9 +84,9 @@ stateFree = function()
 	mouseOver();
 	
 	// Drag item if slot not empty
-	if( mouse_check_button(mb_left) && (slotHover != -1) && inventoryHover[slotHover][0] != -1){
+	if( mouse_check_button(mb_left) && (slotHover != -1) && global.inventory[slotHover][0] != -1){
 		state = stateDrag;
-		itemDrag = inventoryHover[slotHover][0];
+		itemDrag = global.inventory[slotHover][0];
 		inventoryDrag = inventoryHover
 		slotDrag = slotHover;
 	}

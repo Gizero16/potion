@@ -1,0 +1,111 @@
+{
+  "$GMSprite":"v2",
+<<<<<<<< HEAD:sprites/sprCol/sprCol.yy
+  "%Name":"sprCol",
+========
+  "%Name":"sprBox",
+>>>>>>>> parent of 91d5329 (Inventory part 1):sprites/sprBox/sprBox.yy
+  "bboxMode":0,
+  "bbox_bottom":63,
+  "bbox_left":64,
+  "bbox_right":127,
+  "bbox_top":0,
+  "collisionKind":1,
+  "collisionTolerance":0,
+  "DynamicTexturePage":false,
+  "edgeFiltering":false,
+  "For3D":false,
+  "frames":[
+    {"$GMSpriteFrame":"v1","%Name":"39dcf22b-9726-499f-9bb2-7ffae41d0a41","name":"39dcf22b-9726-499f-9bb2-7ffae41d0a41","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+  ],
+  "gridX":0,
+  "gridY":0,
+  "height":64,
+  "HTile":false,
+  "layers":[
+    {"$GMImageLayer":"","%Name":"2ede1f84-f142-4f55-aa48-d1067d799c2d","blendMode":0,"displayName":"default","isLocked":false,"name":"2ede1f84-f142-4f55-aa48-d1067d799c2d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+  ],
+<<<<<<<< HEAD:sprites/sprCol/sprCol.yy
+  "name":"sprCol",
+========
+  "name":"sprBox",
+>>>>>>>> parent of 91d5329 (Inventory part 1):sprites/sprBox/sprBox.yy
+  "nineSlice":null,
+  "origin":0,
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
+  },
+  "preMultiplyAlpha":false,
+  "resourceType":"GMSprite",
+  "resourceVersion":"2.0",
+  "sequence":{
+    "$GMSequence":"v1",
+<<<<<<<< HEAD:sprites/sprCol/sprCol.yy
+    "%Name":"sprCol",
+========
+    "%Name":"sprBox",
+>>>>>>>> parent of 91d5329 (Inventory part 1):sprites/sprBox/sprBox.yy
+    "autoRecord":true,
+    "backdropHeight":768,
+    "backdropImageOpacity":0.5,
+    "backdropImagePath":"",
+    "backdropWidth":1366,
+    "backdropXOffset":0.0,
+    "backdropYOffset":0.0,
+    "events":{
+      "$KeyframeStore<MessageEventKeyframe>":"",
+      "Keyframes":[],
+      "resourceType":"KeyframeStore<MessageEventKeyframe>",
+      "resourceVersion":"2.0",
+    },
+    "eventStubScript":null,
+    "eventToFunction":{},
+    "length":1.0,
+    "lockOrigin":false,
+    "moments":{
+      "$KeyframeStore<MomentsEventKeyframe>":"",
+      "Keyframes":[],
+      "resourceType":"KeyframeStore<MomentsEventKeyframe>",
+      "resourceVersion":"2.0",
+    },
+<<<<<<<< HEAD:sprites/sprCol/sprCol.yy
+    "name":"sprCol",
+========
+    "name":"sprBox",
+>>>>>>>> parent of 91d5329 (Inventory part 1):sprites/sprBox/sprBox.yy
+    "playback":1,
+    "playbackSpeed":30.0,
+    "playbackSpeedType":0,
+    "resourceType":"GMSequence",
+    "resourceVersion":"2.0",
+    "showBackdrop":true,
+    "showBackdropImage":false,
+    "timeUnits":1,
+    "tracks":[
+      {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+<<<<<<<< HEAD:sprites/sprCol/sprCol.yy
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"39dcf22b-9726-499f-9bb2-7ffae41d0a41","path":"sprites/sprCol/sprCol.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"08957562-c2ca-40f0-9312-9c7722006f1e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+========
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d73de9fa-bc46-4804-a3cb-a0362a0b87f4","path":"sprites/sprBox/sprBox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4f533496-e455-4071-a3d3-737e8756958f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+>>>>>>>> parent of 91d5329 (Inventory part 1):sprites/sprBox/sprBox.yy
+          ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
+    ],
+    "visibleRange":null,
+    "volume":1.0,
+    "xorigin":0,
+    "yorigin":0,
+  },
+  "swatchColours":null,
+  "swfPrecision":0.5,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "type":0,
+  "VTile":false,
+  "width":128,
+}

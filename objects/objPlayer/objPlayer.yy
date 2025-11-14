@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_front",
-    "path":"sprites/spr_front/spr_front.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
