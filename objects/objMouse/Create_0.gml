@@ -9,11 +9,12 @@ itemDrag = -1;
 
 mouseOver = function()
 {
+	
 	slotHover = -1;
 	inventoryHover = -1;
-
-	var mx = mouse_x;
-	var my = mouse_y;
+	
+	var mx = device_mouse_x_to_gui(0);
+	var my = device_mouse_y_to_gui(0);
 	
 	with (objInventory)
 	{
@@ -49,33 +50,83 @@ mouseOver = function()
 		}
 	}
 	
-with (objCrafting)
-{
-	if (point_in_rectangle(
-		mx,
-		my,
-		x - 650,
-		y + 200,
-		x - 650 + (250 + rowLength * 64),
-		y + 200 + (125 + (((CRAFTING_SLOTS - 1) div rowLength) + 1) * 64)
-	))
+	with (objCrafting)
 	{
-		for (var i = 0; i < CRAFTING_SLOTS; i += 1)
+		if (point_in_rectangle(
+			mx,
+			my,
+			x - 650,
+			y + 200,
+			x - 650 + (250 + rowLength * 64),
+			y + 200 + (125 + (((CRAFTING_SLOTS - 1) div rowLength) + 1) * 64)
+		))
 		{
-			var xx = (x - 595) + (i mod rowLength) * (88 + 75) + 10;
-			var yy = (y + 250) + (i div rowLength) * (88 + 75);
-
-			if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+			for (var i = 0; i < CRAFTING_SLOTS; i += 1)
 			{
-				global.tooltip_id = global.craftInventory[i][0];
-				other.slotHover = i;
-				other.inventoryHover = global.craftInventory;
+				var xx = (x - 595) + (i mod rowLength) * (88 + 75) + 10;
+				var yy = (y + 250) + (i div rowLength) * (88 + 75);
+
+				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+				{
+					global.tooltip_id = global.craftInventory[i][0];
+					other.slotHover = i;
+					other.inventoryHover = global.craftInventory;
+				}
 			}
 		}
 	}
-}
+	// --- HAND INVENTORY ---
+	with (objHand)
+	{
+		if (point_in_rectangle(
+			mx,
+			my,
+			x + 262,
+			y + 190,
+			x + 262 + (300 + rowLength * 64),
+			y + 190 + (100 + (((HAND_SLOTS - 1) div rowLength) + 1) * 64)
+		))
+		{
+			for (var i = 0; i < HAND_SLOTS; i += 1)
+			{
+				var xx = (x + 315) + (i mod rowLength) * (70 + 75) + 10;
+				var yy = (y + 220) + (i div rowLength) * (88 + 75);
 
-		
+				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+				{
+					global.tooltip_id = global.handInventory[i][0];
+					other.slotHover = i;
+					other.inventoryHover = global.handInventory;
+				}
+			}
+		}
+	}
+	// --- FOREST INVENTORY ---
+	with (objInventoryForest)
+	{
+		if (point_in_rectangle(
+			mx,
+			my,
+			x - 100,
+			y - 400,
+			x - 100 + (300 + rowLength * 64),
+			y - 400 + (400 + (((INVENTORY_SLOTS - 1) div rowLength) + 1) * 64)
+		))
+		{
+			for (var i = 0; i < INVENTORY_SLOTS; i += 1)
+			{
+				var xx = (x - 50) + (i mod rowLength) * (88 + 50) + 10;
+				var yy = (y - 350) + (i div rowLength) * (88 + 50);
+
+				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+				{
+					global.tooltip_id = global.inventory[i][0];
+					other.slotHover = i;
+					other.inventoryHover = global.inventory;
+				}
+			}
+		}
+	}
 }
 
 

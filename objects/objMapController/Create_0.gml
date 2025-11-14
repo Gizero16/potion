@@ -1,1 +1,1 @@
-init_world();
+init_world();;

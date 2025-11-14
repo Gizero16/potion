@@ -27,4 +27,7 @@ function PlayerStateFree(){
 		sprite_index = spriteThrow;
 		state = PlayerStateThrow;
 	}
+	if (keyboard_check_pressed(ord("E")) && !inventoryOpen) {
+		state = PlayerStateInventory;
+	}
 }

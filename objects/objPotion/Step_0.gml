@@ -12,7 +12,7 @@ if (!isThrown) {
     y = objPlayer.y;
 } else {
     // move toward mouse position
-    
+
     var dir = point_direction(x, y, mx, my);
     var dist = point_distance(x, y, mx, my);
 	
