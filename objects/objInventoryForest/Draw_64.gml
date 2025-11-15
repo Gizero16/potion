@@ -1,4 +1,3 @@
-var spacing = 50;
 
 var ui_x = display_get_gui_width() * 0.5 - 100;
 var ui_y = display_get_gui_height() * 0.5;

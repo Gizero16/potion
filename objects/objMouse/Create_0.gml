@@ -7,6 +7,7 @@ inventoryDrag = -1;
 slotDrag = -1;
 itemDrag = -1;
 
+
 mouseOver = function()
 {
 	
@@ -102,31 +103,34 @@ mouseOver = function()
 		}
 	}
 	// --- FOREST INVENTORY ---
-	with (objInventoryForest)
-	{
-		if (point_in_rectangle(
-			mx,
-			my,
-			x - 100,
-			y - 400,
-			x - 100 + (300 + rowLength * 64),
-			y - 400 + (400 + (((INVENTORY_SLOTS - 1) div rowLength) + 1) * 64)
-		))
-		{
-			for (var i = 0; i < INVENTORY_SLOTS; i += 1)
-			{
-				var xx = (x - 50) + (i mod rowLength) * (88 + 50) + 10;
-				var yy = (y - 350) + (i div rowLength) * (88 + 50);
+with (objInventoryForest)
+{
+    var ui_x = display_get_gui_width() * 0.5 - 100;
+    var ui_y = display_get_gui_height() * 0.5;
 
-				if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
-				{
-					global.tooltip_id = global.inventory[i][0];
-					other.slotHover = i;
-					other.inventoryHover = global.inventory;
-				}
-			}
-		}
-	}
+    if (point_in_rectangle(
+        mx, my,
+        ui_x-100,
+        ui_y-400,
+        ui_x-100 + (300 + rowLength * 64),
+        ui_y-400 + (400 + (((INVENTORY_SLOTS - 1) div rowLength) + 1) * 64)
+    ))
+    {
+        for (var i = 0; i < INVENTORY_SLOTS; i++)
+        {
+            var xx = (ui_x - 50) + (i mod rowLength) * (88 + spacing) + 10;
+            var yy = (ui_y - 350) + (i div rowLength) * (88 + spacing);
+
+            if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+            {
+                global.tooltip_id = global.inventory[i][0];
+                other.slotHover = i;
+                other.inventoryHover = global.inventory;
+            }
+        }
+    }
+}
+
 }
 
 
