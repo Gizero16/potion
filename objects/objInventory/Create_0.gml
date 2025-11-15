@@ -7,3 +7,4 @@ global.inventory = array_create(INVENTORY_SLOTS, -1);
 		global.inventory[i][0] = round(random_range(-1, 14))
 		global.inventory[i][1] = round(random_range(1, 16))
 	}
+	

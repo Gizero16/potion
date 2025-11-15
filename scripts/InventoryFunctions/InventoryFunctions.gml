@@ -36,3 +36,16 @@ function InventorySwap(invFrom, slotFrom, invTo, slotTo)
     invFrom[slotFrom] = invTo[slotTo];
     invTo[slotTo] = temp;
 }
+
+function craftItem(itemA, itemB, recipes) {
+	for (i = 0; i < objCrafting.numRecipes; i++) {
+		if(recipes[i][0] == itemA && recipes[i][1] == itemB){
+			
+			
+			return i;
+		}
+	}
+	return -1;
+	
+
+}
