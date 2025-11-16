@@ -7,6 +7,7 @@ hSpeed = 0;
 vSpeed = 0;
 walkSpeed = 6;
 
+spritePickup = spr_player_pickup;
 
 spriteRun = spr_player_run;
 spriteIdle = spr_player;

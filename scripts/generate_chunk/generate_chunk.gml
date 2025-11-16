@@ -36,7 +36,7 @@ function generate_chunk()
                 break;
 
             default:
-                generate_border(chunk);
+                generate_filler(chunk);
                 break;
         }
 

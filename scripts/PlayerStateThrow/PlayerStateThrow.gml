@@ -16,7 +16,6 @@ function PlayerStateThrow(){
 	{
 		image_index = localFrame + (CARDINAL_DIR * _totalFrames); // mx + b concept: localFrame is set by adding frame in current animation to 0 frame of cardinal direction animation
 		localFrame += sprite_get_speed(sprite_index) / FRAME_RATE;
-		animationEnd = true;
 		
 	}
 	else
@@ -30,7 +29,6 @@ function PlayerStateThrow(){
 	
 		localFrame = _totalFrames;
 		image_index = localFrame + (CARDINAL_DIR * _totalFrames) - 1;
-		animationEnd = false;
 	}
 	
 	if (keyThrow)

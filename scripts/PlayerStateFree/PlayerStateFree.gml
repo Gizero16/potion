@@ -30,4 +30,8 @@ function PlayerStateFree(){
 	if (keyboard_check_pressed(ord("E")) && !inventoryOpen) {
 		state = PlayerStateInventory;
 	}
+	if (keyItemPickup) {
+		sprite_index = spritePickup;
+		state = PlayerStatePickup;
+	}
 }

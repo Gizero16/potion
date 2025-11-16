@@ -1,0 +1,1 @@
+objItem.pickedUp = false;
