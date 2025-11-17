@@ -19,4 +19,5 @@ throwCooldown = false;
 createOnce = true;
 inventoryOpen = false;
 
-hp = 3; 
+hp = 1.5;
+hpMax = 3;

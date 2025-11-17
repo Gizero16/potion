@@ -84,6 +84,7 @@
     {"id":{"name":"sprEnemy","path":"sprites/sprEnemy/sprEnemy.yy",},},
     {"id":{"name":"sprFloor","path":"sprites/sprFloor/sprFloor.yy",},},
     {"id":{"name":"sprGrass","path":"sprites/sprGrass/sprGrass.yy",},},
+    {"id":{"name":"sprHearts","path":"sprites/sprHearts/sprHearts.yy",},},
     {"id":{"name":"sprInventory","path":"sprites/sprInventory/sprInventory.yy",},},
     {"id":{"name":"sprItems","path":"sprites/sprItems/sprItems.yy",},},
     {"id":{"name":"sprMushroom","path":"sprites/sprMushroom/sprMushroom.yy",},},
