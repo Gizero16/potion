@@ -15,5 +15,5 @@ recipes[4] = [10, 13] // explosion
 recipes[5] = [10, 14] // bait
 recipes[6] = [12, 14] // pet
 recipes[7] = [10, 15] // sleep
-recipes[8] = [10, 11] // invis
+recipes[8] = [11, 15] // invis
 

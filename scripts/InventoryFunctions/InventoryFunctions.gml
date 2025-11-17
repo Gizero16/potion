@@ -59,10 +59,9 @@ function InventorySwap(invFrom, slotFrom, invTo, slotTo)
 }
 
 function craftItem(itemA, itemB, recipes) {
-	for (i = 0; i < objCrafting.numRecipes; i++) {
+	for (i = 0; i <= objCrafting.numRecipes; i++) {
 		if(recipes[i][0] == itemA && recipes[i][1] == itemB){
-			show_debug_message("itemA:"+ string(itemA))
-			show_debug_message("itemB:" + string(itemB))
+
 			
 			InventoryAdd(global.inventory, i)
 			InventoryRemove(global.craftInventory, itemA)

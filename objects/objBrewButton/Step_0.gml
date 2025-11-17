@@ -12,14 +12,15 @@ if (mouse_check_button_pressed(mb_left) && visible == true)
 			a = b;
 			b = t;
 		}
-		
+
 		show_debug_message(string(craftItem(a, b, recipes)));
+		
 		
 	
 		
 		
 		
+		}
 		
     }
-	}
 }
