@@ -19,4 +19,9 @@ throwCooldown = false;
 createOnce = true;
 inventoryOpen = false;
 
+<<<<<<< Updated upstream
 hp = 3; 
+=======
+hp = 2.5;
+hpMax = 3;
+>>>>>>> Stashed changes

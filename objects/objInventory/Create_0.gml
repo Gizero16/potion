@@ -1,5 +1,5 @@
 rowLength = 3;
-
+#macro STACK_MAX 16
 global.inventory = array_create(INVENTORY_SLOTS, -1);
 	randomize();
 	for (i = 0; i < INVENTORY_SLOTS; i++) {
