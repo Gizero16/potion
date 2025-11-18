@@ -1,0 +1,1 @@
+objPlayer.visible = true

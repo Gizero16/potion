@@ -111,24 +111,8 @@ function InventorySwap(invFrom, slotFrom, invTo, slotTo)
     invTo[slotTo] = temp;
 }
 
-<<<<<<< Updated upstream
-function craftItem(itemA, itemB, recipes) {
-	for (i = 0; i < objCrafting.numRecipes; i++) {
-		if(recipes[i][0] == itemA && recipes[i][1] == itemB){
-			show_debug_message("itemA:"+ string(itemA))
-			show_debug_message("itemB:" + string(itemB))
-			
-			InventoryAdd(global.inventory, i)
-			InventoryRemove(global.craftInventory, itemA)
-			InventoryRemove(global.craftInventory, itemB)
-			return i;
-		}
-	}
-	InventoryRemove(global.craftInventory, itemA)
-	InventoryRemove(global.craftInventory, itemB)
-	return -1;
-	
-=======
+
+
 
 function craftItem(itemA, itemB, recipes)
 {
@@ -139,7 +123,7 @@ function craftItem(itemA, itemB, recipes)
         {
             // SUCCESSFUL recipe
             show_debug_message("Craft success: " + string(i));
->>>>>>> Stashed changes
+
 
             // Try to give crafted item
             PlayerGiveItem(i);

@@ -19,9 +19,9 @@ throwCooldown = false;
 createOnce = true;
 inventoryOpen = false;
 
-<<<<<<< Updated upstream
-hp = 3; 
-=======
-hp = 2.5;
+health = 3;
 hpMax = 3;
->>>>>>> Stashed changes
+invincible = false;
+flash_on = false;
+flash_speed = 5; // lower = faster flash
+
