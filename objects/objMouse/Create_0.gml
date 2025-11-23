@@ -131,6 +131,34 @@ with (objInventoryForest)
     }
 }
 
+with (objHandForest)
+{
+    var ui_x = x;      
+    var ui_y = y + 460; 
+
+    if (point_in_rectangle(
+        mx, my,
+        ui_x,
+        ui_y,
+        ui_x + (190 + rowLength * 64),
+        ui_y + (40 + (((HAND_SLOTS - 1) div rowLength) + 1) * 64)
+    ))
+    {
+        for (var i = 0; i < HAND_SLOTS; i++)
+        {
+            var xx = ui_x + (i mod rowLength) * (88 + spacing) + 10;
+            var yy = ui_y + 5 + (i div rowLength) * (88 + spacing);
+
+            if (point_in_rectangle(mx, my, xx, yy, xx + 64, yy + 64))
+            {
+                global.tooltip_id = global.handInventory[i][0];
+                other.slotHover   = i;
+                other.inventoryHover = global.handInventory;
+            }
+        }
+    }
+}
+
 }
 
 

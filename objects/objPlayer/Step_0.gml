@@ -20,4 +20,4 @@ if (invincible) {
 }
 
 
-script_execute(state);
+state();

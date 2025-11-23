@@ -18,6 +18,7 @@ spriteThrow = spr_player_throw;
 throwCooldown = false;
 createOnce = true;
 inventoryOpen = false;
+throwEffectDone = false;
 
 health = 3;
 hpMax = 3;

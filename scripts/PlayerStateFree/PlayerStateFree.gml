@@ -20,13 +20,16 @@ function PlayerStateFree(){
 
 	//Update Image Index
 	PlayerAnimateSprite();	
-	
-	if (keyAim && !throwCooldown)
-	{
-		//Update Sprite
-		sprite_index = spriteThrow;
-		state = PlayerStateThrow;
+if (keyAim && !throwCooldown){
+    sprite_index = spriteThrow;
+	if(objHandForest.selected != -1) {
+	    throwItem = global.handInventory[objHandForest.selected][0]; // instance variable
+    state = PlayerStateThrow; // assign the function
 	}
+
+}
+
+
 	if (keyboard_check_pressed(ord("E")) && !inventoryOpen) {
 		state = PlayerStateInventory;
 	}
