@@ -5,6 +5,8 @@ function PlayerStateFree(){
 
 	PlayerCollision();
 
+	
+
 	// Update sprite index
 	var _oldSprite = sprite_index;
 	if (inputMagnitude != 0) 
@@ -20,6 +22,11 @@ function PlayerStateFree(){
 
 	//Update Image Index
 	PlayerAnimateSprite();	
+	
+	if (invisible) {
+    image_alpha = 0.4;
+}
+
 if (keyAim && !throwCooldown){
     sprite_index = spriteThrow;
 	if(objHandForest.selected != -1) {

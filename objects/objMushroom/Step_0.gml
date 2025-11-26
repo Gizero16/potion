@@ -9,7 +9,7 @@ if (state == "idle")
     vsp = 0;
 
 
-    if (dist < detect_range)
+    if (dist < detect_range and objPlayer.invisible == false)
         state = "chase";
 }
 
@@ -21,7 +21,7 @@ else if (state == "chase")
     vsp = lengthdir_y(enemySpeed, dir);
 
     // Player escapes
-    if (dist > giveup_range)
+    if (dist > giveup_range || objPlayer.invisible == true)
     {
         state = "idle";
         hsp = 0;

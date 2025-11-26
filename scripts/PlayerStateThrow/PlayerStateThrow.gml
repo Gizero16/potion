@@ -34,15 +34,29 @@ function PlayerStateThrow() {
                 health += 1;
             }
         }
-		layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprHeal)
+		
+		sprId = layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprHeal);
+		alarm[0] = room_speed;
+		
+		
     }
     else if (potion == 1) {
         speedBoostTimer = room_speed * 5;
-        walkSpeed *= 1.5;
+        walkSpeed *= 1.3;
+		alarm[1] = speedBoostTimer
+		
+		sprId = layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprSpeed); // Using the same alarm as b4 because the player cant use 2 potions at a time
+		alarm[0] = room_speed;
+		
     }
     else if (potion == 8) {
         invisTimer = room_speed * 5;
         image_alpha = 0.4;
+		invisible = true
+		alarm[2] = invisTimer
+		
+		sprId = layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprInvis);
+		alarm[0] = room_speed;
     }
     else {
         instance_create_layer(x, y, "potions", objPotion);

@@ -7,5 +7,9 @@ if (other.enemyHealth <= 0) {
 instance_destroy(other);
 }
 
+
+instance_create_layer(x, y, "Instances", objExplosion)
+
+
 objPlayer.createOnce = true
 instance_destroy()

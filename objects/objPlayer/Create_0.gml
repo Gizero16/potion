@@ -20,6 +20,7 @@ createOnce = true;
 inventoryOpen = false;
 throwEffectDone = false;
 
+invisible = false
 health = 3;
 hpMax = 3;
 invincible = false;
