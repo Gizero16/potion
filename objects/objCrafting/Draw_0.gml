@@ -1,7 +1,7 @@
 var spacing = 75;
 
 draw_sprite_stretched(
-sprInventory,
+sprCrafting,
 0,
 x-650,
 y +200,

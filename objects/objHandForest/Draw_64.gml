@@ -4,7 +4,7 @@ var screen_h = display_get_gui_height();
 
 
 draw_sprite_stretched(
-sprInventory,
+sprHand,
 0,
 x,
 y + 460,

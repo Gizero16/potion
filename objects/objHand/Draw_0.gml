@@ -1,18 +1,18 @@
-var spacing = 50;
+var spacing = 25;
 
 draw_sprite_stretched(
-sprInventory,
+sprHand,
 0,
-x + 262,
-y +190,
-300+rowLength*(64),
+x + 255,
+y +200,
+250+rowLength*(64),
 100+(((HAND_SLOTS-1) div rowLength)+1)*64
 )
 
 for (var i = 0; i < HAND_SLOTS; i+=1)
 {
-	var xx = (x + 315) + (i mod rowLength) * (88+spacing) + 10
-	var yy = y + 220 + (i div rowLength) * (88+spacing)
+	var xx = (x + 285) + (i mod rowLength) * (88+spacing) + 10
+	var yy = y + 235 + (i div rowLength) * (88+spacing)
 	var hover = (objMouse.inventoryHover == id) && (objMouse.slotHover == i)
 	draw_sprite(sprSlot, hover, xx,yy)
 	if (global.handInventory[i][0] != -1)
