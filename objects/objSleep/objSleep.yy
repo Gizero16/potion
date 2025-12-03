@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"objExplosion",
+  "%Name":"objSleep",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objExplosion",
+  "name":"objSleep",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,12 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprExplosion",
-    "path":"sprites/sprExplosion/sprExplosion.yy",
+    "name":"sprSleepVFX",
+    "path":"sprites/sprSleepVFX/sprSleepVFX.yy",
   },
-  "spriteMaskId":{
-    "name":"sprExplosion",
-    "path":"sprites/sprExplosion/sprExplosion.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

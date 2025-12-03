@@ -20,13 +20,11 @@ function PlayerStateThrow() {
 
     // ===== ANIMATION FINISHED =====
 
-    // run this block ONE TIME
   if (!throwEffectDone) {
 
     var potion = throwItem;
 
-    // effects...
-    if (potion == 0) {
+    if (potion == 0) { // regen potion
         if (health < objPlayer.hpMax ){
             if (health + 1 > objPlayer.hpMax) {
                 health += 0.5;
@@ -40,7 +38,7 @@ function PlayerStateThrow() {
 		
 		
     }
-    else if (potion == 1) {
+    else if (potion == 1) { // Speed
         speedBoostTimer = room_speed * 5;
         walkSpeed *= 1.3;
 		alarm[1] = speedBoostTimer
@@ -49,7 +47,7 @@ function PlayerStateThrow() {
 		alarm[0] = room_speed;
 		
     }
-    else if (potion == 8) {
+    else if (potion == 8) { // Invis
         invisTimer = room_speed * 5;
         image_alpha = 0.4;
 		invisible = true
@@ -58,9 +56,13 @@ function PlayerStateThrow() {
 		sprId = layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprInvis);
 		alarm[0] = room_speed;
     }
-    else {
-        instance_create_layer(x, y, "potions", objPotion);
-    }
+    else if (potion == 4) { // Explosive
+        instance_create_layer(x, y, "potions", objExplosionPotion);
+    } else if (potion == 7) { // Sleepy
+		instance_create_layer(x, y, "potions", objSleepPotion);
+	} else if( potion ==  2) { // Poison
+		instance_create_layer(x, y, "potions", objPoisonPotion);
+	}
 
     // ---- decrement item here ----
     global.handInventory[objHandForest.selected][1] -= 1;

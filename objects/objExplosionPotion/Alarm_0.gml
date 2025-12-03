@@ -1,0 +1,1 @@
+enemySleeping.enemySpeed = enemyDefaultSpd

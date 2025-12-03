@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"objExplosion",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objPoisonPotion",
+  "eventList":[],
   "managed":true,
-  "name":"objExplosion",
+  "name":"objPoisonPotion",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ThrwPotions",
+    "path":"folders/Objects/ThrwPotions.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objExplosionPotion",
+    "path":"objects/objExplosionPotion/objExplosionPotion.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprExplosion",
-    "path":"sprites/sprExplosion/sprExplosion.yy",
+    "name":"sprPoison",
+    "path":"sprites/sprPoison/sprPoison.yy",
   },
-  "spriteMaskId":{
-    "name":"sprExplosion",
-    "path":"sprites/sprExplosion/sprExplosion.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
