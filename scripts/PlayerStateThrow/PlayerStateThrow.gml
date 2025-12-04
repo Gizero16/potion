@@ -56,12 +56,23 @@ function PlayerStateThrow() {
 		sprId = layer_sprite_create("Instances", objPlayer.x, objPlayer.y, sprInvis);
 		alarm[0] = room_speed;
     }
+	// THROWABLE POTIONS
     else if (potion == 4) { // Explosive
         instance_create_layer(x, y, "potions", objExplosionPotion);
     } else if (potion == 7) { // Sleepy
 		instance_create_layer(x, y, "potions", objSleepPotion);
 	} else if( potion ==  2) { // Poison
 		instance_create_layer(x, y, "potions", objPoisonPotion);
+	}
+	// PLANTABLE POTIONS
+	else if (potion == 3){
+	show_debug_message("Trap potion created!")
+	instance_create_layer(x, y, "Instances", objTrap);
+	// play plant animation here
+	} else if (potion == 6) {
+		instance_create_layer(x, y, "Instances", objPet);
+	} else if (potion == 5) {
+		instance_create_layer(x, y, "Instances", objBait)
 	}
 
     // ---- decrement item here ----

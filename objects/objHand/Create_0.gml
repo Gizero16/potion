@@ -6,5 +6,6 @@ for (i = 0; i < HAND_SLOTS; i++) {
 }
 
 global.handInventory[0] = [4, 10]
-global.handInventory[1] = [7, 10]
-global.handInventory[2] = [2, 10]
+global.handInventory[1] = [5, 10]
+global.handInventory[2] = [6, 10]
+global.handInventory[3] = [3, 10]
