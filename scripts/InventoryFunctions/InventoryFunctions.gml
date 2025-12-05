@@ -121,10 +121,37 @@ function craftItem(itemA, itemB, recipes)
     {
         if (recipes[i][0] == itemA && recipes[i][1] == itemB)
         {
-            // SUCCESSFUL recipe
+       
             show_debug_message("Craft success: " + string(i));
-
-
+			if ( i == 9 || i == 10 || i == 11) { // if crafted item is an endgame item
+				show_debug_message("Endgame item crafted!")
+			if(i == 9) {
+				with (objIsCrafted) {
+					if (Name == "Scorching") {
+						image_index = 1;
+						Crafted = true;
+					}
+				}	
+			} else if ( i == 10 ) {
+				with (objIsCrafted) {
+					if (Name == "Eternal") {
+						image_index = 1;
+						Crafted = true;
+					}
+				}
+			} else if ( i == 11) {
+				with (objIsCrafted) {
+					show_debug_message("Crafting Aroma")
+					if (Name == "Aroma") {
+						image_index = 1;
+						Crafted = true;
+					}
+				}
+			}
+			InventoryRemove(global.craftInventory, itemA);
+            InventoryRemove(global.craftInventory, itemB);
+			return;
+			}
             // Try to give crafted item
             PlayerGiveItem(i);
 

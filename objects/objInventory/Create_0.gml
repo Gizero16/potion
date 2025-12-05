@@ -8,7 +8,7 @@ global.inventory = array_create(INVENTORY_SLOTS, -1);
 	}
 	
 	for(i = 0; i < 8; i++) {
-	global.inventory[i][0] = round(random_range(10, 14))
+	global.inventory[i][0] = round(random_range(10, 15))
 	global.inventory[i][1] = 5
 	}
 	
